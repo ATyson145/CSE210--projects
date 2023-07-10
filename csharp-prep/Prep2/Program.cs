@@ -6,39 +6,36 @@ class Program
     {
         Console.Write("What is your grade percentage? ");
         string input = Console.ReadLine();
-        float grade_percentage = float.Parse(input);  
+        int grade = int.Parse(input);
 
-        string letter = "";
-        if (grade_percentage >= 90)
-        {
+        string letter;
+
+        if (grade >= 90) {
             letter = "A";
+            Console.WriteLine($"You got an {letter}!");
         }
-        else if (grade_percentage >= 80)
-        {
+        else if (grade >= 80) {
             letter = "B";
+            Console.WriteLine($"You got an {letter}!");
         }
-        else if (grade_percentage >= 70)
-        {
+        else if (grade >= 70) {
             letter = "C";
+            Console.WriteLine($"You got an {letter}!");
         }
-        else if (grade_percentage >= 60)
-        {
+        else if (grade >= 60) {
             letter = "D";
+            Console.WriteLine($"You got an {letter}!");
         }
-        else
-        {
+        else if (grade < 60) {
             letter = "F";
+            Console.WriteLine($"You got an {letter}!");
         }
 
-        Console.WriteLine($"Your letter grade is a {letter}");
-
-        if (grade_percentage < 70)
-        {
-            Console.WriteLine("You did not pass the class");
+        if (grade >= 70) {
+            Console.WriteLine("You passed!!!");
         }
-        else
-        {
-            Console.WriteLine("You passed the class!");
+        else if (grade < 70) {
+            Console.WriteLine("You failed the class. Please try again.");
         }
     }
 }
