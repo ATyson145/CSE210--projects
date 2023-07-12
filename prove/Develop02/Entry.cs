@@ -21,8 +21,8 @@ namespace Develop02
         }
         public override string ToString(){
 
-            return $"{_date}: | Prompt: {_prompt} | Response: {_response}\n";
-            
+            return $"\n{_date}: | Prompt: {_prompt} | Response: {_response}\n";
+
         }
     }
 }

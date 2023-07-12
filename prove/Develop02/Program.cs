@@ -12,7 +12,7 @@ namespace Develop02
             Prompts randomPrompt = new Prompts();
             string input = string.Empty;
 
-            Console.WriteLine("Welcome to the new Journal program!");
+            Console.WriteLine("\nWelcome to the new Journal program!\n");
 
             while (input != "5") {
 
@@ -26,7 +26,7 @@ namespace Develop02
                 input = Console.ReadLine();
 
                 if (input == "1") {
-                    Console.Write("Please enter today's date (i.e. May 15th, 2020): ");
+                    Console.Write("\nPlease enter today's date (i.e. May 15th, 2020): ");
                     string date = Console.ReadLine();
 
                     string prompt = randomPrompt.GetRandomPrompt();
@@ -47,7 +47,7 @@ namespace Develop02
                     string filename = Console.ReadLine();
 
                     journal.SaveJournal(filename);
-                    Console.WriteLine("The entries have been saved to your file.");
+                    Console.WriteLine("The entries have been saved to your file.\n");
                 }
 
                 else if (input == "4") {
@@ -55,7 +55,7 @@ namespace Develop02
                     string filename = Console.ReadLine();
 
                     journal.LoadJournal(filename);
-                    Console.WriteLine("The files' entries have been loaded.");
+                    Console.WriteLine("The files' entries have been loaded.\n");
                 }
 
                 else if (input == "5") {
@@ -65,8 +65,8 @@ namespace Develop02
                 }
                 else {
 
-                    Console.WriteLine("Input not valid. Please try again.");
-                    
+                    Console.WriteLine("Input not valid. Please try again.\n");
+
                 }
             }
         }

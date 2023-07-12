@@ -18,13 +18,13 @@ namespace Develop02
         {
             Entry newEntry = new Entry(prompt, response, date);
             entries.Add(newEntry);
-            Console.WriteLine("New entry added!");
+            Console.WriteLine("\nNew entry added!\n");
         }
         public void DisplayEntries() {
             foreach (Entry entry in entries) {
 
                 Console.WriteLine(entry);
-                
+
             }
         }
         public void SaveJournal(string filename) {
@@ -32,7 +32,7 @@ namespace Develop02
 
                 foreach (Entry entry in entries) {
 
-                    outputfile.WriteLine($"{entry._prompt} | {entry._response} | {entry._date}");
+                    outputfile.WriteLine($"\n{entry._prompt} | {entry._response} | {entry._date}");
 
                 }
                 entries.Clear();
