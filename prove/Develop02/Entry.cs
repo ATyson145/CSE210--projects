@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 namespace Develop02
 {
@@ -8,32 +9,20 @@ namespace Develop02
 
     public class Entry
     {
-        public string prompt;
-        public string response;
-        public string date;
-        public string GetPrompt()
-        {
-            return prompt;
+        public string _prompt {get; set;}
+        public string _response {get; set;}
+        public string _date {get; set;}
+        public Entry(string prompt, string response, string date) {
+
+            _prompt = prompt;
+            _response = response;
+            _date = date;
+
         }
-        public string GetResponse()
-        {
-            return response;
-        }
-        public string GetDate()
-        {
-            return date;
-        }
-        public void StorePrompt(string prompt)
-        {
-            this.prompt = prompt;
-        }
-        public void StoreResponse(string response)
-        {
-            this.response = response;
-        }
-        public void StoreDate(string date)
-        {
-            this.date = date;
+        public override string ToString(){
+
+            return $"{_date}: | Prompt: {_prompt} | Response: {_response}\n";
+            
         }
     }
 }
