@@ -26,7 +26,7 @@ namespace Develop04 {
             PauseForSeconds(3);
         }
         private void DisplayFinishingMessage() {
-            Console.WriteLine("\nGood job! You have completed the activity.");
+            Console.WriteLine("Good job! You have completed the activity.");
             Console.WriteLine($"You spent {_duration} seconds on {_name}.");
             PauseForSeconds(3);
         }

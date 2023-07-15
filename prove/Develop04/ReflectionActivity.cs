@@ -5,13 +5,13 @@ using System.Collections.Generic;
 namespace Develop04 {
     
     public class ReflectionActivity : Activity {
-        private string[] prompts = {
+        private string[] _prompts = {
         "Think of a time when you stood up for someone else.",
         "Think of a time when you did something really difficult.",
         "Think of a time when you helped someone in need.",
         "Think of a time when you did something truly selfless."
         };
-        private string[] questions = {
+        private string[] _questions = {
         "Why was this experience meaningful to you?",
         "Have you ever done anything like this before?",
         "How did you get started?",
@@ -27,10 +27,10 @@ have shown strength and resilience. This will help you recognize the power you h
 of your life.") {
         }
         protected override void PerformActivity() {
-            Console.WriteLine("\nLet's start the reflection activity!");
+            Console.WriteLine("Let's start the reflection activity!");
 
             Random random = new Random();
-            string prompt = prompts[random.Next(prompts.Length)];
+            string prompt = _prompts[random.Next(_prompts.Length)];
 
             Console.WriteLine($"\nPrompt: {prompt}");
             PauseForEnter();
@@ -42,7 +42,7 @@ of your life.") {
 
             while (elapsedTime.TotalSeconds < _duration)
             {
-                string question = questions[random.Next(questions.Length)];
+                string question = _questions[random.Next(_questions.Length)];
                 Console.WriteLine($"Question: {question}");
                 PauseForSeconds(10);
 

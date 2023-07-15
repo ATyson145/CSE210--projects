@@ -9,11 +9,12 @@ namespace Develop04 {
             Console.WriteLine("1. Breathing Activity");
             Console.WriteLine("2. Reflection Activity");
             Console.WriteLine("3. Listening Activity");
+            Console.WriteLine("4. Exercise Activity");
             Console.WriteLine("----------------");
         }
         public void RunMenu() {
             DisplayMenu();
-            Console.Write("Enter you choice (1-3): ");
+            Console.Write("Enter you choice (1-4): ");
             string choice = Console.ReadLine();
             Console.WriteLine("----------------");
 
@@ -32,6 +33,11 @@ namespace Develop04 {
 
                 case "3":
                     activity = new ListeningActivity();
+                    activity.Start();
+                    break;
+
+                case "4":
+                    activity = new ExerciseActivity();
                     activity.Start();
                     break;
 

@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace Develop04 {
     public class ListeningActivity : Activity {
-        private string[] prompts = {
+        private string[] _prompts = {
         "Who are people that you appreciate?",
         "What are personal strengths of yours?",
         "Who are people that you have helped this week?",
@@ -16,11 +16,11 @@ namespace Develop04 {
     }
         protected override void PerformActivity()
         {
-            Console.WriteLine("Let's star the listening activity.");
+            Console.WriteLine("Let's start the listening activity!");
             Random random = new Random();
-            int promptIndex = random.Next(0, prompts.Length);
-            Console.WriteLine(prompts[promptIndex]);
-            PauseForSeconds(4);
+            int promptIndex = random.Next(0, _prompts.Length);
+            Console.WriteLine(_prompts[promptIndex]);
+            PauseForSeconds(10);
 
             Console.WriteLine("Start listing what comes to mind: ");
             List<string> items = new List<string>();
@@ -29,7 +29,7 @@ namespace Develop04 {
                 string item = Console.ReadLine();
                 items.Add(item);
             }
-            Console.WriteLine($"You listed {items.Count} items.");
+            Console.WriteLine($"\nYou listed {items.Count} items.\n");
         }
     }
 }
