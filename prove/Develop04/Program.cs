@@ -1,9 +1,12 @@
 using System;
 
-class Program
-{
-    static void Main(string[] args)
+namespace Develop04 {
+    class Program
     {
-        Console.WriteLine("Hello Develop04 World!");
+        static void Main(string[] args)
+        {
+            Menu menu = new Menu();
+            menu.RunMenu();
+        }
     }
 }
